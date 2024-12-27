@@ -60,11 +60,9 @@ If you have suggestions or want to contribute, feel free to open an issue or sub
 
 ## 🌍 Sneak Peek
 ![Gameplay Screenshot](Screenshots/Game.png)
-![Gameplay Screenshot](Screenshots/Game.png)
-![Gameplay Screenshot](Screenshots/Game.png)
-![Gameplay Screenshot](Screenshots/Game.png)
-![Gameplay Screenshot](Screenshots/Game.png)
-![Gameplay Screenshot](Screenshots/Game.png)
-![Gameplay Screenshot](Screenshots/Game.png)
+![Gameplay Screenshot](Screenshots/Game00.png)
+![Gameplay Screenshot](Screenshots/Game01.png)
+![Gameplay Screenshot](Screenshots/Game02.png)
+![Gameplay Screenshot](Screenshots/Game03.png)
 
 ---
