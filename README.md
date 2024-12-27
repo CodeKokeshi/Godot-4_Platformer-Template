@@ -59,6 +59,12 @@ If you have suggestions or want to contribute, feel free to open an issue or sub
 ---
 
 ## 🌍 Sneak Peek
-![Gameplay Screenshot](Game.png)
+![Gameplay Screenshot](Screenshots/Game.png)
+![Gameplay Screenshot](Screenshots/Game.png)
+![Gameplay Screenshot](Screenshots/Game.png)
+![Gameplay Screenshot](Screenshots/Game.png)
+![Gameplay Screenshot](Screenshots/Game.png)
+![Gameplay Screenshot](Screenshots/Game.png)
+![Gameplay Screenshot](Screenshots/Game.png)
 
 ---
