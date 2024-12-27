@@ -1,0 +1,110 @@
+[gd_scene load_steps=16 format=3 uid="uid://doj1jnnpb3ssq"]
+
+[ext_resource type="Texture2D" uid="uid://c7fm6ui8bmvqg" path="res://Sprites/Objects/Flag/Checkpoint (Flag Idle)(64x64).png" id="1_7iicx"]
+[ext_resource type="Script" path="res://Scripts/Misc/checkpoint.gd" id="1_iih32"]
+[ext_resource type="FontFile" uid="uid://cvp82o06tlqa7" path="res://PixelFont.ttf" id="3_fe0we"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vdnuu"]
+atlas = ExtResource("1_7iicx")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x2hns"]
+atlas = ExtResource("1_7iicx")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2naup"]
+atlas = ExtResource("1_7iicx")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f3w1h"]
+atlas = ExtResource("1_7iicx")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_11ljk"]
+atlas = ExtResource("1_7iicx")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2htls"]
+atlas = ExtResource("1_7iicx")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xcgp8"]
+atlas = ExtResource("1_7iicx")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rm627"]
+atlas = ExtResource("1_7iicx")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3a8uv"]
+atlas = ExtResource("1_7iicx")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t7y8p"]
+atlas = ExtResource("1_7iicx")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i1fd5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vdnuu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x2hns")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2naup")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f3w1h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_11ljk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2htls")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xcgp8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rm627")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3a8uv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t7y8p")
+}],
+"loop": true,
+"name": &"default",
+"speed": 18.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_okkyb"]
+size = Vector2(36, 610)
+
+[node name="Checkpoint" type="Area2D"]
+script = ExtResource("1_iih32")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_i1fd5")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -273)
+shape = SubResource("RectangleShape2D_okkyb")
+
+[node name="State" type="Label" parent="."]
+texture_filter = 1
+offset_left = -20.0
+offset_top = -39.0
+offset_right = 20.0
+offset_bottom = -16.0
+theme_override_fonts/font = ExtResource("3_fe0we")
+theme_override_font_sizes/font_size = 16
+text = "Not Set"
+horizontal_alignment = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
