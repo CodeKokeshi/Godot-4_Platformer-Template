@@ -38,6 +38,7 @@ Welcome to **Godot 4 Platformer Template**, a feature-packed starting point for 
 
 ## 📜 Credits
 - **Pixel Art:** [PixelAdventure by PixelFrog](https://pixelfrog-assets.itch.io/pixel-adventure-1)
+- **Pixel Font:**[at01 Pixel Font by GrafxKid](https://itch.io/queue/c/733269/godot-pixel-fonts?game_id=707314)
 - **Development:** CodeKokeshi
 
 ---
