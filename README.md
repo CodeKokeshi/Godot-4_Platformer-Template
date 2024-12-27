@@ -48,6 +48,6 @@ Have suggestions or want to contribute? Feel free to open an issue or submit a p
 ---
 
 ## 🌈 Sneak Peek
-![Gameplay Screenshot](https://via.placeholder.com/800x400?text=Add+your+gameplay+screenshot+here)
+![Gameplay Screenshot](Game.png)
 
 ---
