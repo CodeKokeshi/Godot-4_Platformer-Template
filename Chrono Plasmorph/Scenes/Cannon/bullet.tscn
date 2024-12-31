@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://db2v2n8da7d4m"]
+
+[ext_resource type="Script" path="res://Scripts/Cannon/bullet.gd" id="1_iixuj"]
+[ext_resource type="Texture2D" uid="uid://b0vfjikemwoen" path="res://Sprites/Objects/Cannon/Bullet.png" id="1_owesy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x86dk"]
+atlas = ExtResource("1_owesy")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c5m1m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x86dk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ck1a8"]
+size = Vector2(11, 9)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7pqy5"]
+particle_flag_disable_z = true
+initial_velocity_min = 145.16
+initial_velocity_max = 161.29
+angular_velocity_min = 518.71
+angular_velocity_max = 518.71
+gravity = Vector3(0, 98, 0)
+
+[node name="Bullet" type="CharacterBody2D"]
+script = ExtResource("1_iixuj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_c5m1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -3.5)
+shape = SubResource("RectangleShape2D_ck1a8")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(2, -4)
+process_material = SubResource("ParticleProcessMaterial_7pqy5")
+lifetime = 0.05
+trail_enabled = true
